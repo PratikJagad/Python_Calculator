@@ -12,7 +12,10 @@ def multiply(a, b):
 
 def Division(a, b):
     """Return the divison of a and b."""
-    return a / b
+    try:
+        return a / b
+    except ZeroDivisionError:
+        return " Error: Division by zero is not allowed"
 
 if __name__ == "__main__":
     print("Addition:", add(5, 3))
